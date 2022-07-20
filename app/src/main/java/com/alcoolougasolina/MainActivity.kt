@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         // Listener p/ seekbar
         seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                var valorGasolina = p1
+                valorGasolina = p1
                 var texto = "R$"
                 texto += formataValor (valorGasolina/100.0)
                 txtGasolina.text = texto
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         /// Listener do botão CALCULAR
         btn.setOnClickListener {
-            var valorResultado = (valorGasolina * 0.7)/100.0
+            val valorResultado = (valorGasolina * 0.7) / (100.0)
             var texto = "Abasteça com Alcool se ele custar até R$: "
             texto += formataValor(valorResultado)
             txtResultado.text = texto
